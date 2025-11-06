@@ -240,12 +240,9 @@ def facebook():
 @app.route("/kwai", methods=["GET", "POST"])
 def kwai():
     return handle_platform("Kwai")
-
-# ============ تشغيل السيرفر ============
-
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
     import os
-port = int(os.environ.get("PORT", 5000))
-app.run(host="0.0.0.0", port=port)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
 
